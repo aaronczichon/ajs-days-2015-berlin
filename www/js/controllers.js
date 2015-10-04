@@ -8,6 +8,7 @@ angular.module('workshop.controllers', ['ionic'])
 			power: undefined,
 			url: undefined
 		};
+		$scope.cars = undefined;
 		// Definition des modal window
 		$ionicModal.fromTemplateUrl('templates/add-daimler.html', {
 			scope: $scope,
@@ -38,5 +39,13 @@ angular.module('workshop.controllers', ['ionic'])
 				$scope.benz = undefined;
 				$scope.addModal.hide();
 			});
+		};
+		
+		var getCars = function() {
+			Cars.all().then(function(items){
+				$scope.cars = items;
+			});
 		}
+		
+		getCars();
 	});

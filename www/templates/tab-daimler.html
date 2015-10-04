@@ -1,10 +1,14 @@
 <ion-view view-title="Mercedes-Benz">
   <ion-nav-buttons side="right">
-      <button class="button" ng-click="show()">
-        Actions
-      </button>
-    </ion-nav-buttons>
+    <button class="button" ng-click="show()">
+      Actions
+    </button>
+  </ion-nav-buttons>
   <ion-content class="padding">
-    Content Here
+    <ion-item collection-repeat="car in cars" class="item-avatar">
+        <img src="{{car.url}}">
+        <h2>{{car.model}}</h2>
+        <p>{{car.type}} | {{car.power}}</p>
+    </ion-item>
   </ion-content>
 </ion-view>
