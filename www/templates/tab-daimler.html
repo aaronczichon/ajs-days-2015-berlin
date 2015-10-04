@@ -5,10 +5,12 @@
     </button>
   </ion-nav-buttons>
   <ion-content class="padding">
+    <ion-refresher pulling-text="Aktualisieren..." on-refresh="getCars()">
+    </ion-refresher>
     <ion-item collection-repeat="car in cars" class="item-avatar">
-        <img src="{{car.url}}">
-        <h2>{{car.model}}</h2>
-        <p>{{car.type}} | {{car.power}}</p>
+      <img src="{{car.url}}">
+      <h2>{{car.model}}</h2>
+      <p>{{car.typ}} | {{car.power}}</p>
     </ion-item>
   </ion-content>
 </ion-view>

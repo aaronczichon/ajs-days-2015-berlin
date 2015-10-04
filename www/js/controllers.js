@@ -41,11 +41,12 @@ angular.module('workshop.controllers', ['ionic'])
 			});
 		};
 		
-		var getCars = function() {
+		$scope.getCars = function() {
 			Cars.all().then(function(items){
 				$scope.cars = items;
+				$scope.$broadcast('scroll.refreshComplete');
 			});
 		}
 		
-		getCars();
+		$scope.getCars();
 	});
