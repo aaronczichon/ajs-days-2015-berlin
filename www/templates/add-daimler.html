@@ -1,0 +1,28 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Neuer Benz</h1>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-input item-stacked-label">
+        <span class="input-label">Modell</span>
+        <input type="text" placeholder="Modell" ng-model="benz.model">
+      </ion-item>
+      <ion-item class="item-input item-stacked-label">
+        <span class="input-label">Bezeichnung</span>
+        <input type="text" placeholder="Bezeichnung" ng-model="benz.typ">
+      </ion-item>
+      <ion-item class="item-input item-stacked-label">
+        <span class="input-label">Leistung</span>
+        <input type="text" placeholder="PS" ng-model="benz.power">
+      </ion-item>
+      <ion-item class="item-input item-stacked-label">
+        <span class="input-label">Bild</span>
+        <input type="url" placeholder="http://mercedes-benz.de" ng-model="benz.url">
+      </ion-item>
+      <button class="button button-full button-dark" ng-click="addCar(benz)">
+        Hinzufügen
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-modal-view>

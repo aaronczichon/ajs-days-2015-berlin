@@ -1,5 +1,5 @@
 angular.module('workshop.cars', [])
-	.factory('Cars', [function () {
+	.factory('Cars', ['$q',function ($q) {
 		// Azure Mobile Service Instanz
 		var client = new WindowsAzure.MobileServiceClient(
 			"https://workshop.azure-mobile.net/",
