@@ -26,11 +26,7 @@ angular.module('workshop.cars', [])
 		}
 
 		return {
-			all: function () {
-				return getAll();
-			},
-			push: function (item) {
-				return addItem(item);
-			}
+			all: getAll,
+			push: addItem
 		}
 	}]);
