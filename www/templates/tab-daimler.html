@@ -1,0 +1,18 @@
+<ion-view view-title="Mercedes-Benz">
+	<ion-nav-buttons side="right">
+		<button ng-click="show()">Add</button>
+	</ion-nav-buttons>
+	<ion-content>
+		<ion-refresher pulling-text="Aktualisieren..." on-refresh="init()">
+		</ion-refresher>
+		
+		<button class="button button-block button-positive" ng-click="checkUpdate()">
+			Check for update
+		</button>
+		<ion-item collection-repeat="car in cars" class="item-avatar" ng-click="triggerEvent()">
+			<img src="{{car.url}}">
+			<h2>{{car.model}}</h2>
+			<p>{{car.typ}} | {{car.power}}</p>
+		</ion-item>
+	</ion-content>
+</ion-view>
