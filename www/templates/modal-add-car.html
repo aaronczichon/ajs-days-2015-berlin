@@ -1,0 +1,24 @@
+<ion-view view-title="Add car">
+	<ion-header-bar>
+		<h1 class="title">Add Car</h1>
+	</ion-header-bar>
+	<ion-content>
+		<ion-item class="item-input item-stacked-label">
+			<span class="input-label">Name</span>
+			<input type="text" placeholder="Name" ng-model="daimler.model">
+		</ion-item>
+		<ion-item class="item-input item-stacked-label">
+			<span class="input-label">Bezeichnung</span>
+			<input type="text" placeholder="Bezeichnung" ng-model="daimler.typ">
+		</ion-item>
+		<ion-item class="item-input item-stacked-label">
+			<span class="input-label">Leistung</span>
+			<input type="text" placeholder="Leistung" ng-model="daimler.power">
+		</ion-item>
+		<ion-item class="item-input item-stacked-label">
+			<span class="input-label">URL</span>
+			<input type="text" placeholder="Leistung" ng-model="daimler.url">
+		</ion-item>
+		<button class="button-full button-positive" ng-click="addCar(daimler)">Save</button>
+	</ion-content>
+</ion-view>
